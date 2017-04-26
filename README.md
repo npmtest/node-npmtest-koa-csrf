@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-koa-csrf/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-koa-csrf/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-koa-csrf/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-koa-csrf/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-koa-csrf/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-koa-csrf/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-koa-csrf/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-koa-csrf/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-koa-csrf/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-koa-csrf/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-koa-csrf/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-koa-csrf/build/coverage.html/index.html)
 
@@ -35,15 +35,13 @@
 ```json
 
 {
-    "name": "koa-csrf",
-    "description": "CSRF tokens for koa",
-    "version": "3.0.5",
     "author": {
         "name": "Jonathan Ong",
-        "url": "http://jongleberry.com",
-        "twitter": "https://twitter.com/jongleberry"
+        "url": "http://jongleberry.com"
     },
-    "bugs": "koajs/csrf/issues",
+    "bugs": {
+        "url": "https://github.com/koajs/csrf/issues"
+    },
     "contributors": [
         {
             "name": "Nick Baugh"
@@ -52,6 +50,7 @@
     "dependencies": {
         "csrf": "^3.0.3"
     },
+    "description": "CSRF tokens for koa",
     "devDependencies": {
         "babel-cli": "^6.14.0",
         "babel-preset-crocodile": "^1.0.0",
@@ -68,9 +67,15 @@
         "mocha": "^3.0.2",
         "supertest": "^2.0.0"
     },
+    "directories": {},
+    "dist": {
+        "shasum": "df876b010ac1454e93dc1a4f3ab24a8e644b65e7",
+        "tarball": "https://registry.npmjs.org/koa-csrf/-/koa-csrf-3.0.5.tgz"
+    },
     "engines": {
         "node": ">= 6.x"
     },
+    "gitHead": "19628eb24da46d810b084f2108f3e58389834d5a",
     "homepage": "https://github.com/koajs/csrf",
     "keywords": [
         "cross",
@@ -88,17 +93,62 @@
     ],
     "license": "MIT",
     "main": "lib/index.js",
-    "repository": "koajs/csrf",
+    "maintainers": [
+        {
+            "name": "aheckmann"
+        },
+        {
+            "name": "coderhaoxin"
+        },
+        {
+            "name": "dead-horse"
+        },
+        {
+            "name": "dead_horse"
+        },
+        {
+            "name": "eivifj"
+        },
+        {
+            "name": "fengmk2"
+        },
+        {
+            "name": "jongleberry"
+        },
+        {
+            "name": "juliangruber"
+        },
+        {
+            "name": "niftylettuce"
+        },
+        {
+            "name": "popomore"
+        },
+        {
+            "name": "stephenmathieson"
+        },
+        {
+            "name": "tjholowaychuk"
+        }
+    ],
+    "name": "koa-csrf",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/koajs/csrf.git"
+    },
     "scripts": {
-        "analyze-coverage": "node_modules/.bin/babel-node node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
-        "check-coverage": "node_modules/.bin/babel-node node_modules/.bin/istanbul check-coverage",
+        "analyze-coverage": "babel-node node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
+        "check-coverage": "babel-node node_modules/.bin/istanbul check-coverage",
         "compile": "rm -rf lib/ && babel -d lib src",
         "coverage": "rm -rf coverage/ && npm run analyze-coverage && npm run check-coverage && node_modules/.bin/codecov",
         "lint": "eslint .",
         "mocha": "NODE_ENV=test node_modules/.bin/_mocha",
         "prepublish": "npm run test",
         "test": "npm run lint && npm run compile && npm run coverage"
-    }
+    },
+    "version": "3.0.5",
+    "bin": {}
 }
 ```
 
